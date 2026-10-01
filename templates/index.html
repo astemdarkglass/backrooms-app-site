@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Закулисье — Архив</title>
+    <link rel="icon" href="{{ url_for('static', filename='assets/images/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<!-- сюда будут подставляться стили конкретной страницы -->
+<div id="pageStyles"></div>
+</head>
+<body>
+<div id="outerwrapper">
+
+    <!-- ============ HEADER ============ -->
+    <div id="head">
+        <div id="topbar">
+            <div id="identity">
+                <h1><a href="/">Закулисье</a></h1>
+                <p class="head2"><strong>Архив — собрание документов об уровнях, сущностях и объектах</strong></p>
+            </div>
+            <div id="pagetop">
+                <div id="topnav">
+                    <ul>
+                        <li class="user-info" id="userBox">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="logo">
+            <div id="sitesearch">
+                <form onsubmit="return false;">
+                    <input type="text" id="searchfield" placeholder="Поиск..." class="txt">
+                </form>
+            </div>
+        </div>
+
+        <div id="navigation">
+            <div id="navbar_link">
+                <ul>
+                    <li data-route="home"><a href="#home">Главная</a></li>
+                    <li data-route="levels0-100"><a href="#levels">Уровни</a></li>
+                    <li data-route="entities"><a href="#entities">Сущности</a></li>
+                    <li data-route="objects"><a href="#objects">Объекты</a></li>
+                    <li data-route="records"><a href="#records">Записи</a></li>
+                    <li data-route="info"><a href="#info">Информация</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ ОСНОВНОЙ БЛОК ============ -->
+    <div id="innerwrapper">
+
+        <!-- ЛЕВАЯ КОЛОНКА -->
+        <div id="leftsidebar">
+            <div class="SidebarItem">
+                <h2>Навигация</h2>
+                <ul class="sidebar-menu">
+                    <li><a href="#home" class="active">Главная</a></li>
+                    <li><a href="#levels0-100">Уровни</a></li>
+                    <li><a href="#entities">Сущности</a></li>
+                    <li><a href="#objects">Объекты</a></li>
+                    <li><a href="#records">Записи</a></li>
+                    <li><a href="#info">Информация</a></li>
+                </ul>
+            </div>
+
+            <div class="SidebarItem">
+                <h2>Статистика</h2>
+                <div class="info-item"><span class="label">Уровней:</span> <span class="value" data-stat="levels">0</span></div>
+                <div class="info-item"><span class="label">Сущностей:</span> <span class="value" data-stat="entities">0</span></div>
+                <div class="info-item"><span class="label">Объектов:</span> <span class="value" data-stat="objects">0</span></div>
+                <div class="info-item"><span class="label">Записей:</span> <span class="value" data-stat="records">0</span></div>
+            </div>
+
+            <div class="SidebarItem">
+                <h2>О сайте</h2>
+                <p>Архив Закулисья — собрание документов об уровнях, сущностях и объектах.</p>
+                <p style="font-size:11px; color:#888;">Версия 2.0 · Обновлено: 2024</p>
+            </div>
+        </div>
+
+        <!-- ЦЕНТРАЛЬНАЯ КОЛОНКА: сюда грузится контент -->
+        <div id="contentmid">
+            <div id="pageContent">
+                <!-- сюда JS вставит HTML конкретной "страницы" -->
+            </div>
+        </div>
+
+        <!-- ПРАВАЯ КОЛОНКА -->
+        <div id="rightsidebar">
+            <div class="SidebarItem">
+                <h2>🏆 Рейтинг странников</h2>
+                <div id="ratingContainer">
+                    <!-- JS подставит таблицу -->
+                </div>
+            </div>
+
+            <div class="SidebarItem" style="padding:0; background:transparent; border:none;">
+                <p style="padding:0 8px; margin-bottom:6px;">Реклама</p>
+                <div id="adContainer"></div>
+            </div>
+
+            <div class="SidebarItem">
+                <h2>Быстрые ссылки</h2>
+                <ul>
+                    <li><a href="#">Помощь</a></li>
+                    <li><a href="#">О проекте</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <div id="footer">
+        <p><span style="float:left;">© 2024 Закулисье. Все права защищены.</span></p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/components.js') }}"></script>
+<script src="{{ url_for('static', filename='js/random-ad.js') }}"></script>
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+<script src="{{ url_for('static', filename='js/auth.js') }}"></script>
+</body>
+</html>
